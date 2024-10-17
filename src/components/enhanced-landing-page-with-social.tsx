@@ -29,35 +29,6 @@ function ServiceCard({ title, description, imageUrl }: ServiceCardProps) {
   )
 }
 
-interface TestimonialCardProps {
-  quote: string;
-  author: string;
-  company: string;
-  imageUrl: string;
-}
-
-function TestimonialCard({ quote, author, company, imageUrl }: TestimonialCardProps) {
-  return (
-    <div className="bg-white dark:bg-[#1c1c1e] p-6 rounded-lg shadow-lg">
-      <p className="text-[#1d1d1f] dark:text-white mb-4 italic">&quot;{quote}&quot;</p>
-      <div className="flex items-center">
-        <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-          <Image
-            src={imageUrl}
-            alt={author}
-            width={48}
-            height={48}
-            objectFit="cover"
-          />
-        </div>
-        <div>
-          <p className="font-semibold text-[#1d1d1f] dark:text-white">{author}</p>
-          <p className="text-[#86868b] dark:text-[#a1a1a6]">{company}</p>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export function EnhancedLandingPageWithSocial() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
