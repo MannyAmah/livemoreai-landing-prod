@@ -16,7 +16,6 @@ import {
   Pill,
   Shield,
   ChevronRight,
-
   Menu,
   X,
 } from "lucide-react";
@@ -47,7 +46,12 @@ export default function Component() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex h-16 items-center justify-between container mx-auto px-4 sm:px-6 lg:px-8">
           <Link className="flex items-center gap-2" href="/">
-            <img src="/images/logo.png" alt="logo" className="object-contain" width="20px" />
+            <img
+              src="/images/logo.png"
+              alt="logo"
+              className="object-contain"
+              width="20px"
+            />
             <h1 className="text-xl font-bold text-white">Livemore</h1>
           </Link>
           <nav className="hidden md:flex gap-6 text-white">
@@ -269,15 +273,12 @@ export default function Component() {
               <div className="grid lg:grid-cols-2">
                 <div className="p-8 sm:p-12 flex flex-col justify-center">
                   <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
-                    Our mission is to revolutionize personalized healthcare
-                    through data-driven insights
+                  Health Insights and Personalized treatment from your health Data
                   </h2>
                   <p className="text-muted-foreground mb-8">
-                    By harnessing the power of advanced analytics, we aim to
-                    transform the healthcare landscape, providing tailored
-                    solutions that enhance outcomes, prevent diseases, and
-                    empower individuals to take control of their health and
-                    well-being.
+                    We use AI to analyze your health data and provide you with
+                    personalized health insights and treatments and improve your
+                    health and wellness.
                   </p>
                   <Button className="w-fit">Learn about our approach</Button>
                 </div>
