@@ -23,7 +23,6 @@ import {
   X,
 } from "lucide-react";
 
-
 const MotionLink = motion(Link);
 
 function ThemeToggle() {
@@ -35,7 +34,7 @@ function ThemeToggle() {
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:text-white dark:-rotate-90 dark:scale-0" />
       <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
       <span className="sr-only">Toggle theme</span>
     </Button>
@@ -45,12 +44,12 @@ function ThemeToggle() {
 export default function Component() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-
   return (
     <div className="flex w-screen min-h-screen flex-col bg-background bg-black text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex h-16 items-center justify-between container mx-auto px-4 sm:px-6 lg:px-8">
-          <Link className="flex items-center gap-2" href="#">
+          <Link className="flex items-center gap-2" href="/">
+            <img src="/images/logo.png" alt="logo" className="object-contain" width="20px" />
             <h1 className="text-xl font-bold text-white">Livemore</h1>
           </Link>
           <nav className="hidden md:flex gap-6 text-white">
@@ -71,8 +70,11 @@ export default function Component() {
             ))}
           </nav>
           <div className="flex items-center gap-4">
-            <ThemeToggle />
-            <Button variant="ghost" className="hidden sm:inline-flex text-white">
+            {/* <ThemeToggle /> */}
+            <Button
+              variant="ghost"
+              className="hidden sm:inline-flex text-white"
+            >
               <Link href={"https://app.livemoreai.com/"}>Sign in</Link>
             </Button>
             <Button className="hidden sm:inline-flex">
@@ -162,7 +164,6 @@ export default function Component() {
                     size="lg"
                     variant="outline"
                     className="w-full sm:w-auto text-white"
-
                   >
                     Learn more
                   </Button>
@@ -182,10 +183,10 @@ export default function Component() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+              <h2 className="text-2xl text-white font-bold tracking-tight sm:text-3xl md:text-4xl">
                 Our main focus
               </h2>
-              <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-600">
+              <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-500">
                 Leveraging innovative technologies to advance healthcare by
                 emphasizing disease prevention, early detection, accurate
                 diagnosis, personalized treatment, and cost reduction.
@@ -287,7 +288,6 @@ export default function Component() {
                     src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto=format&fit=crop"
                     alt="Healthcare Innovation"
                     fill
-                    
                     className="object-cover"
                   />
                 </div>
@@ -324,33 +324,33 @@ export default function Component() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted">
+      <footer className="bg-muted py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-4">
               <Link href="#" className="flex items-center gap-2">
-                <span className="text-xl font-bold">Livemore</span>
+                <span className="text-xl font-bold text-white">Livemore</span>
               </Link>
               <p className="text-sm text-gray-600">
                 Revolutionizing healthcare through innovation and technology.
               </p>
             </div>
             {[
-              {
-                title: "Product",
-                items: ["Features", "Solutions", "Pricing", "Updates"],
-              },
+              // {
+              //   title: "Product",
+              //   items: ["Features", "Solutions", "Pricing", "Updates"],
+              // },
               {
                 title: "Company",
-                items: ["About us", "Careers", "Press", "Contact"],
+                items: ["About us", "Contact"],
               },
               {
                 title: "Legal",
-                items: ["Terms", "Privacy", "Contact"],
+                items: ["Terms", "Privacy"],
               },
             ].map((column) => (
               <div key={column.title} className="space-y-4">
-                <h3 className="font-semibold">{column.title}</h3>
+                <h3 className="font-semibold text-white">{column.title}</h3>
                 <ul className="space-y-2">
                   {column.items.map((item) => (
                     <li key={item}>
