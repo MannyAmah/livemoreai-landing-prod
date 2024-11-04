@@ -1,5 +1,6 @@
-import { EnhancedLandingPageWithSocial } from "@/components/enhanced-landing-page-with-social";
+import LandingPage from '@/components/page';
+
 
 export default function Home() {
-  return <EnhancedLandingPageWithSocial />;
+  return <LandingPage />;
 }
