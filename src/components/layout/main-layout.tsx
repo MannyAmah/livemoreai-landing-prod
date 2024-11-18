@@ -5,9 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Instagram, Linkedin, Menu, X, Youtube } from "lucide-react";
+import { Linkedin, Menu, Twitter, X, Youtube } from "lucide-react";
 
 const MotionLink = motion(Link);
+
+const NavItems = [
+  { label: "Home", link: "/", id: 1 },
+  { label: "Solutions", link: "#solutions", id: 2 },
+  { label: "How it works", link: "#howitworks", id: 3 },
+  { label: "About us", link: "/about", id: 3 },
+];
 
 interface IMainLayout {
   children: React.ReactNode;
@@ -15,6 +22,24 @@ interface IMainLayout {
 
 export default function MainLayout({ children }: IMainLayout) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    if (id === "/") {
+      window.location.href = "/";
+      return;
+    }
+
+    if (id === "/about") {
+      window.location.href = "/about";
+      return;
+    }
+
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="flex w-screen min-h-screen flex-col bg-background bg-black text-foreground">
@@ -31,15 +56,12 @@ export default function MainLayout({ children }: IMainLayout) {
             <h1 className="text-lg font-semibold text-white">Livemore</h1>
           </Link>
           <nav className="hidden md:flex gap-6 text-white">
-            {[
-              { label: "Home", link: "#home", id: 1 },
-              { label: "Solutions", link: "#solutions", id: 2 },
-              { label: "How it works", link: "#how-it-works", id: 3 },
-            ].map((item) => (
+            {NavItems.map((item) => (
               <MotionLink
                 key={item.id}
                 className="text-sm font-medium text-muted-foreground hover:text-primary"
-                href={item.link}
+                onClick={() => scrollToSection(item.link)}
+                href={"#"}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -79,14 +101,17 @@ export default function MainLayout({ children }: IMainLayout) {
             exit={{ opacity: 0, y: -20 }}
           >
             <nav className="flex flex-col gap-4 p-4 bg-background border-t">
-              {["Home", "Solutions", "How it works"].map((item) => (
+              {NavItems.map((item) => (
                 <Link
-                  key={item}
+                  key={item.id}
                   className="text-sm font-medium text-muted-foreground hover:text-primary"
-                  href="#"
-                  onClick={() => setMobileMenuOpen(false)}
+                  href={item.link}
+                  onClick={() => {
+                    scrollToSection(item.link);
+                    setMobileMenuOpen(false);
+                  }}
                 >
-                  {item}
+                  {item.label}
                 </Link>
               ))}
               <Button variant="ghost" className="justify-start text-white">
@@ -124,7 +149,7 @@ export default function MainLayout({ children }: IMainLayout) {
                 Company
               </h3>
               <ul className="space-y-3">
-                {["About Us",].map((item) => (
+                {["About Us"].map((item) => (
                   <li key={item}>
                     <Link
                       href="/about"
@@ -141,18 +166,16 @@ export default function MainLayout({ children }: IMainLayout) {
                 Product
               </h3>
               <ul className="space-y-3">
-                {["Home", "How it works", "Solutions"].map(
-                  (item) => (
-                    <li key={item}>
-                      <Link
-                        href="#"
-                        className="text-sm hover:text-[#1A8FAE] transition-colors"
-                      >
-                        {item}
-                      </Link>
-                    </li>
-                  )
-                )}
+                {["Home", "How it works", "Solutions"].map((item) => (
+                  <li key={item}>
+                    <Link
+                      href="#"
+                      className="text-sm hover:text-[#1A8FAE] transition-colors"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="space-y-4">
@@ -184,8 +207,8 @@ export default function MainLayout({ children }: IMainLayout) {
             </p>
             <div className="flex items-center gap-4">
               <Link href="#" className="text-gray-400 hover:text-[#1A8FAE]">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">X</span>
               </Link>
               <Link href="#" className="text-gray-400 hover:text-[#1A8FAE]">
                 <Linkedin className="h-5 w-5" />

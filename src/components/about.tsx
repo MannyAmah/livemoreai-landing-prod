@@ -25,8 +25,8 @@ export function AboutUsPage() {
               About Livemore
             </h1>
             <p className="text-xl dark:text-gray-400 max-w-2xl">
-              Revolutionizing healthcare with AI-driven personalized wellness
-              solutions.
+            Prevent diseases from invading your body by actively monitoring your
+              health data.
             </p>
           </div>
         </header>
@@ -37,18 +37,17 @@ export function AboutUsPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="dark:text-white">
                 <p className="text-lg mb-4">
-                  At Livemore, we envision a world where everyone has access to
-                  personalized, AI-powered health insights. We're on a mission
-                  to democratize preventive healthcare and empower individuals
-                  to take control of their well-being.
-                </p>
-                <p className="text-lg mb-4">
-                  Our upcoming MVP release marks the first step towards this
-                  vision, offering users a glimpse into the future of proactive
-                  health management.
+                  At Livemore, We help you stay one step ahead of illness, catch
+                  your health warning signs before they turn into big health
+                  issues with sleepless nights and mounting medical bills. We're
+                  on a mission to democratize preventive healthcare and empower
+                  individuals to take control of their well-being.
                 </p>
               </div>
-              <div className="relative h-64 md:h-full">
+              <div
+                className="relative h-96 md:h-full"
+                style={{ height: "400px", width: "auto" }}
+              >
                 <Image
                   src="https://images.unsplash.com/photo-1531956656798-56686eeef3d4?q=80&w=2054&auto=format&fit=crop"
                   alt="Livemore team brainstorming"
@@ -69,7 +68,8 @@ export function AboutUsPage() {
                   Traditional healthcare is reactive, often addressing issues
                   after they become serious. We're flipping the script by
                   providing proactive, personalized health recommendations
-                  powered by cutting-edge AI technology.
+                  Prevent diseases from invading your body by actively
+                  monitoring your health data.
                 </p>
               </CardContent>
             </Card>
@@ -127,48 +127,6 @@ export function AboutUsPage() {
                     <p className="text-muted-foreground">
                       {approach.description}
                     </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
-
-          <section className="mb-16">
-            <h2 className="text-3xl dark:text-white font-bold mb-8">
-              Meet Our Founding Team
-            </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  name: "Dr. Emmanuel Amah",
-                  role: "Founder & CEO",
-                  image: "/placeholder.svg?height=300&width=300",
-                },
-                {
-                  name: "Thomas Ifeanyi",
-                  role: "Founder & CTO",
-                  image: "/placeholder.svg?height=300&width=300",
-                },
-                {
-                  name: "Salisu Abubakar",
-                  role: "Founder & Product Lead",
-                  image: "/placeholder.svg?height=300&width=300",
-                },
-              ].map((member, index) => (
-                <Card key={index}>
-                  <CardContent className="p-6 flex flex-col items-center text-center">
-                    <div className="relative w-32 h-32 mb-4">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover rounded-full"
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-muted-foreground">{member.role}</p>
                   </CardContent>
                 </Card>
               ))}

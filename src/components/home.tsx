@@ -18,12 +18,19 @@ import {
   ArrowRight,
 } from "lucide-react";
 import MainLayout from "./layout/main-layout";
+import { useRef } from "react";
 
 export default function Component() {
+  const solutionsRef = useRef(null);
+  const howItWorksRef = useRef(null);
+
   return (
     <MainLayout>
       <>
-        <section className="relative min-h-[calc(100vh-4rem)] flex items-center overflow-hidden">
+        <section
+          id="#home"
+          className="relative min-h-[calc(100vh-4rem)] flex items-center overflow-hidden"
+        >
           <video
             autoPlay
             loop
@@ -53,13 +60,13 @@ export default function Component() {
                   Personalize care for a healthier you.
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                  Our commitment to pioneering innovations is revolutionizing
-                  the landscape of wellness
+                  Prevent diseases from invading your body by actively
+                  monitoring your health data.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="w-full sm:w-auto">
                     <Link href={"https://app.livemoreai.com/"}>
-                      Get started
+                      Live Better Now
                     </Link>
                   </Button>
                   <Button
@@ -74,11 +81,12 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="py-12 md:py-24 bg-muted">
-          <div
-            id="#solutions"
-            className="container mx-auto px-4 sm:px-6 lg:px-8"
-          >
+        <section
+          id="#solutions"
+          className="py-12 md:py-24 bg-muted"
+          ref={solutionsRef}
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="text-center space-y-4 mb-12"
               initial={{ opacity: 0, y: 20 }}
@@ -86,12 +94,12 @@ export default function Component() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl text-white font-bold tracking-tight sm:text-3xl md:text-4xl">
-                Our main focus
+                Stay healthy, avoid hospital and save cost
               </h2>
               <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-500">
-                Leveraging innovative technologies to advance healthcare by
-                emphasizing disease prevention, early detection, accurate
-                diagnosis, personalized treatment, and cost reduction.
+                Stay one step ahead of illness, catch your health warning signs
+                before they turn into big health issues with sleepless nights
+                and mounting medical bills.
               </p>
             </motion.div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -162,7 +170,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="py-24">
+        <section id="#howitworks" className="py-24" ref={howItWorksRef}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="text-center space-y-4 mb-12"
@@ -342,7 +350,7 @@ export default function Component() {
                     className="whitespace-nowrap group"
                     size="lg"
                   >
-                    Get Started
+                    Feel Better, Live Better
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </div>

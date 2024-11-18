@@ -84,11 +84,7 @@ export function TermsPage() {
           <p className="font-medium">
             Livemore
             <br />
-            [Address]
-            <br />
             Email: support@livemoreai.com
-            <br />
-            Phone: +2341234567891
           </p>
         </div>
       </div>

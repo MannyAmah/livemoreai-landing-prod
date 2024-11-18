@@ -87,11 +87,7 @@ export default function PrivacyPage() {
           <p className="font-medium">
             Livemore
             <br />
-            [Address]
-            <br />
             Email: privacy@livemoreai.com
-            <br />
-            Phone: +2341234567891
           </p>
         </div>
       </div>
