@@ -1,8 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -31,6 +34,12 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import MainLayout from "./layout/main-layout";
 
 const formSchema = z.object({
@@ -67,8 +76,30 @@ export default function BetaPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const router = useRouter();
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setErrorMessage(null);
+    try {
+      const response = await fetch("https://app.livemoreai.com/auth/progams/beta-signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || "An unexpected error occurred.");
+      }
+
+      setIsModalOpen(true); // Open success modal
+    } catch (_) {
+      setErrorMessage("An unexpected error occurred.");
+    }
   }
 
   return (
@@ -229,10 +260,33 @@ export default function BetaPage() {
                 >
                   Submit Application
                 </Button>
+                {errorMessage && (
+                  <p className="text-red-500 text-sm mt-2">{errorMessage}</p>
+                )}
               </form>
             </Form>
           </CardContent>
         </Card>
+        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+          <DialogContent className="text-center bg-white">
+            <DialogHeader>
+              <DialogTitle>Thank You!</DialogTitle>
+            </DialogHeader>
+            <p>
+              Thank you for joining the beta program! We’ll contact you soon
+              with further details.
+            </p>
+            <Button
+              className="mt-4 w-full bg-black text-white"
+              onClick={() => {
+                setIsModalOpen(false);
+                router.push("/");
+              }}
+            >
+              Continue to Home
+            </Button>
+          </DialogContent>
+        </Dialog>
       </div>
     </MainLayout>
   );

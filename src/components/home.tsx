@@ -65,7 +65,7 @@ export default function Component() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="w-full sm:w-auto">
-                    <Link href={"https://app.livemoreai.com/"}>
+                    <Link href={"/beta-signup"}>
                       Live Better Now
                     </Link>
                   </Button>
