@@ -74,7 +74,7 @@ export default function MainLayout({ children }: IMainLayout) {
               variant="ghost"
               className="hidden sm:inline-flex text-white"
             >
-              <Link href={"/beta-signup"}>Sign in</Link>
+              <Link href={"https://app.livemoreai.com/login"}>Sign in</Link>
             </Button>
             <Button className="hidden sm:inline-flex">
               <Link href={"/beta-signup"}>Get started</Link>
@@ -115,7 +115,7 @@ export default function MainLayout({ children }: IMainLayout) {
                 </Link>
               ))}
               <Button variant="ghost" className="justify-start text-white">
-                <Link href={"/beta-signup"}>Sign in</Link>
+                <Link href={"https://app.livemoreai.com/login"}>Sign in</Link>
               </Button>
               <Button className="justify-start">
                 <Link href={"/beta-signup"}>Get started</Link>
