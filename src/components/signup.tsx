@@ -32,16 +32,16 @@ export default function SignUpPage() {
                 {
                   title: "Member",
                   icon: User,
-                  href: "/register?account=member",
+                  href: "https://app.livemoreai.com/register?account=member",
                   description: "Register as an individual member",
                   detail:
-                    "Access personalized healthcare services and manage your health records",
+                    "Access personalized healthcare services and manage your health",
                   gradient: "from-blue-500 to-cyan-400",
                 },
                 {
                   title: "Doctors",
                   icon: Stethoscope,
-                  href: "/register?account=doctor",
+                  href: "https://app.livemoreai.com/register?account=doctor",
                   description: "Register as a medical professional",
                   detail:
                     "Join our network of healthcare providers and connect with patients",
@@ -50,7 +50,7 @@ export default function SignUpPage() {
                 {
                   title: "Healthcare Providers",
                   icon: Building2,
-                  href: "/register?account=provider",
+                  href: "https://app.livemoreai.com/register?account=provider",
                   description: "Register your healthcare facility",
                   detail:
                     "List your healthcare services and manage patient relationships",
@@ -59,7 +59,7 @@ export default function SignUpPage() {
                 {
                   title: "Labs",
                   icon: FlaskRound,
-                  href: "/register?account=lab",
+                  href: "https://app.livemoreai.com/register?account=lab",
                   description: "Register your laboratory",
                   detail: "Offer diagnostic services and manage test results",
                   gradient: "from-green-500 to-emerald-400",
@@ -77,7 +77,7 @@ export default function SignUpPage() {
 
                     <CardHeader className="relative space-y-4 pb-4">
                       <div
-                        className={`inline-flex rounded-full bg-gradient-to-r ${item.gradient} p-3`}
+                        className={`inline-flex rounded-full bg-gradient-to-r ${item.gradient} p-3 w-10 h-10`}
                       >
                         <item.icon className="h-6 w-6 text-white" />
                       </div>
