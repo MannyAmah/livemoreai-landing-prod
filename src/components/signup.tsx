@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-
 import {
   Card,
   CardContent,
@@ -30,39 +29,23 @@ export default function SignUpPage() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
               {[
                 {
-                  title: "Member",
+                  title: "User",
                   icon: User,
                   href: "https://app.livemoreai.com/register?account=member",
-                  description: "Register as an individual member",
+                  description: "Register as an individual user",
                   detail:
                     "Access personalized healthcare services and manage your health",
                   gradient: "from-blue-500 to-cyan-400",
                 },
-                {
-                  title: "Doctors",
-                  icon: Stethoscope,
-                  href: "https://app.livemoreai.com/register?account=doctor",
-                  description: "Register as a medical professional",
-                  detail:
-                    "Join our network of healthcare providers and connect with patients",
-                  gradient: "from-purple-500 to-pink-400",
-                },
+
                 {
                   title: "Healthcare Providers",
-                  icon: Building2,
-                  href: "https://app.livemoreai.com/register?account=provider",
-                  description: "Register your healthcare facility",
+                  icon: Stethoscope,
+                  href: "https://app.livemoreai.com/register?account=doctor",
+                  description: "Register as a healthcare",
                   detail:
-                    "List your healthcare services and manage patient relationships",
-                  gradient: "from-orange-500 to-amber-400",
-                },
-                {
-                  title: "Labs",
-                  icon: FlaskRound,
-                  href: "https://app.livemoreai.com/register?account=lab",
-                  description: "Register your laboratory",
-                  detail: "Offer diagnostic services and manage test results",
-                  gradient: "from-green-500 to-emerald-400",
+                    "Offer your medical expertise and connect with patients",
+                  gradient: "from-blue-500 to-cyan-400",
                 },
               ].map((item) => (
                 <Link key={item.title} href={item.href}>
