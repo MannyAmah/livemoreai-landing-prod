@@ -185,7 +185,7 @@ export function AboutUsPage() {
                   program. Help shape the future of personalized healthcare!
                 </p>
                 <Button variant="default" size="lg" asChild>
-                  <Link href="/beta-signup">
+                  <Link href="/signup">
                     Join Beta Program <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
