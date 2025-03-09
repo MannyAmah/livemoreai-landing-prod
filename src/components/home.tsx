@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -16,6 +15,7 @@ import {
   Cloud,
   Droplet,
   ArrowRight,
+  Sparkles,
 } from "lucide-react";
 import MainLayout from "./layout/main-layout";
 import { useRef } from "react";
@@ -53,28 +53,33 @@ export default function Component() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Badge className="w-fit bg-primary/10 text-primary hover:bg-primary/20">
+                <Badge className="w-fit  bg-primary/10 text-green-300 hover:bg-primary/20">
                   Healthcare Innovation
                 </Badge>
                 <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white">
-                  Personalize care for a healthier you.
+                  Personalize care for a{" "}
+                  <span className="text-green-300">Healthier you.</span>
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed dark:text-gray-100">
                   Prevent diseases from invading your body by actively
                   monitoring your health data.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="w-full sm:w-auto">
-                    <Link href={"/signup"}>
-                      Live Better Now
-                    </Link>
-                  </Button>
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
                   <Button
                     size="lg"
-                    variant="outline"
-                    className="w-full sm:w-auto text-white"
+                    className="md:flex-1 bg-primary hover:bg-primary/90 text-primary-foreground dark:bg-primary dark:hover:bg-primary/90 dark:text-primary-foreground transition-all duration-300 rounded-xl"
                   >
-                    <Link href={"/about"}>Learn more</Link>
+                    <Sparkles className="mr-2 h-5 w-5" />
+                    <a href="/signup">Live Better Now</a>
+                  </Button>
+
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="md:flex-1 border-gray-300 text-gray-800 hover:bg-gray-100 hover:text-gray-900 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-white transition-all duration-300 rounded-xl"
+                  >
+                    <a href="/about">Learn more</a>
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
               </motion.div>
@@ -93,7 +98,7 @@ export default function Component() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl text-white font-bold tracking-tight sm:text-3xl md:text-4xl">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                 Stay healthy, avoid hospital and save cost
               </h2>
               <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-500">
@@ -156,13 +161,6 @@ export default function Component() {
                       <p className="text-gray-600 flex-grow">
                         {feature.description}
                       </p>
-                      {/* <Link
-                        href="#"
-                        className="text-primary hover:underline inline-flex items-center mt-4"
-                      >
-                        Learn more
-                        <ChevronRight className="h-4 w-4 ml-1" />
-                      </Link> */}
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -248,7 +246,7 @@ export default function Component() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h3 className="text-2xl text-white font-semibold mb-4">
+              <h3 className="text-2xl font-semibold mb-4">
                 Unlocking Your Body&apos;s Memory
               </h3>
               <p className="text-muted-foreground mb-6">
@@ -276,7 +274,7 @@ export default function Component() {
                     <div className="bg-primary/10 p-2 rounded-full">
                       <item.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <span className="font-medium text-white">{item.title}</span>
+                    <span className="font-medium">{item.title}</span>
                   </motion.div>
                 ))}
               </div>
@@ -286,14 +284,14 @@ export default function Component() {
         <section className="py-24 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              className="bg-card rounded-2xl overflow-hidden shadow-lg"
+              className="dark:bg-muted dark:text-white bg-card rounded-2xl overflow-hidden shadow-lg bg-gray-200 text-black"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               <div className="grid lg:grid-cols-2">
                 <div className="p-8 sm:p-12 flex flex-col justify-center">
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-6">
                     Health Insights and Personalized treatment from your health
                     Data
                   </h2>
