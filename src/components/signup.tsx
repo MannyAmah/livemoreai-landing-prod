@@ -15,8 +15,8 @@ import Link from "next/link";
 export default function SignUpPage() {
   return (
     <MainLayout>
-      <div className="min-h-screen bg-black p-4 text-white md:p-6 lg:p-8">
-        <Card className="mx-auto max-w-2xl bg-zinc-900 text-white">
+      <div className="min-h-screen p-4 md:p-6 lg:p-8">
+        <Card className="mx-auto max-w-2xl dark:bg-zinc-900">
           <CardHeader>
             <CardTitle className="text-2xl font-bold">
               Choose Your Path
