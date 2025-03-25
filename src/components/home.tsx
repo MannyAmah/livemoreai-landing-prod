@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 import MainLayout from "./layout/main-layout";
 import { useRef } from "react";
+import HealthCardsSection from "./sections/health-card-sections";
+import BodyMemorySection from "./sections/body-memory-sections";
 
 export default function Component() {
   const solutionsRef = useRef(null);
@@ -53,12 +55,12 @@ export default function Component() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Badge className="w-fit  bg-primary/10 text-green-300 hover:bg-primary/20">
+                <Badge className="w-fit  bg-primary/10 text-[#006FB7] hover:bg-primary/20">
                   Healthcare Innovation
                 </Badge>
                 <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white">
                   Personalize care for a{" "}
-                  <span className="text-green-300">Healthier you.</span>
+                  <span className="text-[#006FB7]">Healthier you.</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed dark:text-gray-100">
                   Prevent diseases from invading your body by actively
@@ -86,88 +88,8 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section
-          id="#solutions"
-          className="py-12 md:py-24 bg-muted"
-          ref={solutionsRef}
-        >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="text-center space-y-4 mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
-                Stay healthy, avoid hospital and save cost
-              </h2>
-              <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-500">
-                Stay one step ahead of illness, catch your health warning signs
-                before they turn into big health issues with sleepless nights
-                and mounting medical bills.
-              </p>
-            </motion.div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: Microscope,
-                  title: "Disease Prevention",
-                  description:
-                    "Focuses on using cutting-edge AI to empower individuals to take control of their health.",
-                },
-                {
-                  icon: Brain,
-                  title: "Disease Prediction",
-                  description:
-                    "Harnesses the power of AI to predict your risk of developing various diseases.",
-                },
-                {
-                  icon: HeartPulse,
-                  title: "Early Detection",
-                  description:
-                    "Utilizes cutting-edge AI to identify potential health issues in their earliest stages.",
-                },
-                {
-                  icon: Stethoscope,
-                  title: "Accurate Diagnosis",
-                  description:
-                    "Leverages AI to revolutionize the diagnostic process through comprehensive analysis.",
-                },
-                {
-                  icon: Pill,
-                  title: "Personalized Treatment",
-                  description:
-                    "Creates a personalized treatment plan designed specifically for your needs.",
-                },
-                {
-                  icon: Shield,
-                  title: "Cost Guardian",
-                  description:
-                    "Helps you take control of your healthcare expenses through AI-powered insights.",
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card className="h-full">
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <feature.icon className="h-12 w-12 text-primary mb-4" />
-                      <h3 className="text-xl font-semibold mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-600 flex-grow">
-                        {feature.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <HealthCardsSection />
+
         <section id="#howitworks" className="py-24" ref={howItWorksRef}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -180,7 +102,7 @@ export default function Component() {
                 How it Works
               </h2>
               <p className="max-w-2xl mx-auto text-xl text-muted-foreground">
-                Personalized insights for better health
+                Personalized health insights for a healthier and longer life.
               </p>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-16">
@@ -238,7 +160,8 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="pb-24">
+        <BodyMemorySection />
+        {/* <section className="pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="mt-16 bg-muted rounded-lg px-8 py-12"
@@ -249,12 +172,7 @@ export default function Component() {
               <h3 className="text-2xl font-semibold mb-4">
                 Unlocking Your Body&apos;s Memory
               </h3>
-              <p className="text-muted-foreground mb-6">
-                Your genetic system stores information on everything that
-                happens to your body, from the food you eat to the environmental
-                factors that affect you. Our goal is to unlock this memory and
-                understand what transpires in your body&apos;s &quot;hood&quot;.
-              </p>
+              
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {[
                   { title: "Nutrition Analysis", icon: Utensils },
@@ -280,7 +198,8 @@ export default function Component() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
+
         <section className="py-24 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div

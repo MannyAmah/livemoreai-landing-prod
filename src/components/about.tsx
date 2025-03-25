@@ -25,8 +25,8 @@ export function AboutUsPage() {
               About Livemore
             </h1>
             <p className="text-xl dark:text-gray-400 max-w-2xl">
-            Prevent diseases from invading your body by actively monitoring your
-              health data.
+              Prevent diseases by actively monitoring your health data and
+              taking action for healthier you.
             </p>
           </div>
         </header>
@@ -40,7 +40,7 @@ export function AboutUsPage() {
                   At Livemore, We help you stay one step ahead of illness, catch
                   your health warning signs before they turn into big health
                   issues with sleepless nights and mounting medical bills. We're
-                  on a mission to democratize preventive healthcare and empower
+                  on a mission to Normalize preventive healthcare and empower
                   individuals to take control of their well-being.
                 </p>
               </div>
@@ -87,18 +87,7 @@ export function AboutUsPage() {
                   description:
                     "Leveraging machine learning to provide personalized health recommendations.",
                 },
-                {
-                  icon: Target,
-                  title: "User-Centric Design",
-                  description:
-                    "Creating an intuitive interface for easy understanding of complex health data.",
-                },
-                {
-                  icon: Rocket,
-                  title: "Rapid Iteration",
-                  description:
-                    "Continuously improving our product based on user feedback and new research.",
-                },
+
                 {
                   icon: Users,
                   title: "Community Focus",
@@ -133,7 +122,7 @@ export function AboutUsPage() {
             </div>
           </section>
 
-          <section className="mb-16">
+          {/* <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8">Our Journey So Far</h2>
             <div className="space-y-4">
               <Card>
@@ -172,7 +161,7 @@ export function AboutUsPage() {
                 </CardContent>
               </Card>
             </div>
-          </section>
+          </section> */}
 
           <section>
             <Card className="bg-primary dark:bg-muted text-primary-foreground">
