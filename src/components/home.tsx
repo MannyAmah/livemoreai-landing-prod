@@ -2,28 +2,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  HeartPulse,
-  Microscope,
-  Brain,
-  Stethoscope,
-  Pill,
-  Shield,
-  Utensils,
-  Cloud,
-  Droplet,
-  ArrowRight,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import MainLayout from "./layout/main-layout";
 import { useRef } from "react";
 import HealthCardsSection from "./sections/health-card-sections";
 import BodyMemorySection from "./sections/body-memory-sections";
 
 export default function Component() {
-  const solutionsRef = useRef(null);
   const howItWorksRef = useRef(null);
 
   return (
