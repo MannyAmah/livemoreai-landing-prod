@@ -3,13 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  ArrowRight,
-  Lightbulb,
-  Users,
-  Clock,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, Lightbulb, Users, Clock, Zap } from "lucide-react";
 import MainLayout from "./layout/main-layout";
 
 export function AboutUsPage() {
@@ -62,11 +56,10 @@ export function AboutUsPage() {
             <Card className="bg-secondary">
               <CardContent className="p-6">
                 <p className="text-xl font-medium text-secondary-foreground">
-                  Traditional healthcare is reactive, often addressing issues
-                  after they become serious. We're flipping the script by
-                  providing proactive, personalized health recommendations
-                  Prevent diseases from invading your body by actively
-                  monitoring your health data.
+                  We are committed to helping you to live healthier, longer and
+                  disease-free life. Instead of reactive treatment, we provide
+                  you with proactive recommendations that ensure you stay
+                  healthy, without chronic disease.
                 </p>
               </CardContent>
             </Card>

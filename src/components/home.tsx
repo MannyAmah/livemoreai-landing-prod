@@ -49,8 +49,7 @@ export default function Component() {
                   <span className="text-[#006FB7]">Healthier you.</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed dark:text-gray-100">
-                  Prevent diseases from invading your body by actively
-                  monitoring your health data.
+                Prevent diseases by actively monitoring your health data and taking action for healthier you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
                   <Button
