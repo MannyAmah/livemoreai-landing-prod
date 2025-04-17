@@ -41,9 +41,9 @@ export default function Component() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Badge className="w-fit  bg-primary/10 text-[#006FB7] hover:bg-primary/20">
+                {/* <Badge className="w-fit  bg-primary/10 text-[#006FB7] hover:bg-primary/20">
                   Healthcare Innovation
-                </Badge>
+                </Badge> */}
                 <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white">
                   Personalize care for a{" "}
                   <span className="text-[#006FB7]">Healthier you.</span>
@@ -209,7 +209,7 @@ export default function Component() {
                 <div className="relative" style={{ height: "50vh" }}>
                   <Image
                     src="https://images.unsplash.com/photo-1579047917338-a6a69144fe63?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Healthcare Innovation"
+                    alt="Livemore"
                     fill
                     className="object-cover"
                   />
