@@ -54,7 +54,7 @@ export default function SignupPage() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/healthcare-request-access/",
+        "http://dashboard.livemoreai.com/api/healthcare-request-access/",
         {
           method: "POST",
           headers: {

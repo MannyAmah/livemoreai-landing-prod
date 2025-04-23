@@ -18,7 +18,8 @@ const fontBody = Inter({
 
 export const metadata: Metadata = {
   title: "Livemoreai",
-  description: "Livemore AI",
+  description:
+    "Livemore AI: Prevent diseases by actively monitoring your health data and taking action for healthier you.",
 };
 
 export default function RootLayout({

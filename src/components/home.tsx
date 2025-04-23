@@ -29,6 +29,7 @@ export default function Component() {
             <source
               src="https://firebasestorage.googleapis.com/v0/b/imageupload-e4f08.appspot.com/o/videos%2Fbackground-video.mp4?alt=media&token=79f3ec72-f92c-4825-9cbd-557fc536b583"
               type="video/mp4"
+              // src="https://v.ftcdn.net/02/15/49/17/700_F_215491786_Y9bkFxksLCtkMdMbWhDYOg1VGBGau9tI_ST.mp4"
             />
             Your browser does not support the video tag.
           </video>
@@ -49,7 +50,8 @@ export default function Component() {
                   <span className="text-[#006FB7]">Healthier you.</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed dark:text-gray-100">
-                Prevent diseases by actively monitoring your health data and taking action for healthier you.
+                  Prevent diseases by actively monitoring your health data and
+                  taking action for healthier you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
                   <Button
@@ -57,7 +59,7 @@ export default function Component() {
                     className="md:flex-1 bg-primary hover:bg-primary/90 text-primary-foreground dark:bg-primary dark:hover:bg-primary/90 dark:text-primary-foreground transition-all duration-300 rounded-xl"
                   >
                     <Sparkles className="mr-2 h-5 w-5" />
-                    <a href="/signup">Live Better Now</a>
+                    <a href="https://app.livemoreai.com/register">Live Better Now</a>
                   </Button>
 
                   <Button
@@ -73,7 +75,9 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <HealthCardsSection />
+        <section id="#solutions">
+          <HealthCardsSection />
+        </section>
 
         <section id="#howitworks" className="py-24" ref={howItWorksRef}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
