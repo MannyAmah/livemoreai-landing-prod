@@ -20,8 +20,8 @@ const MotionLink = motion(Link);
 
 const NavItems = [
   { label: "Home", link: "/", id: 1 },
-  { label: "Solutions", link: "#solutions", id: 2 },
   { label: "Providers", link: "/providers", id: 3 },
+  { label: "Research", link: "#solutions", id: 2 },
   { label: "About us", link: "/about", id: 4 },
 ];
 
@@ -33,7 +33,7 @@ export default function MainLayout({ children }: IMainLayout) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Detect scroll for header effects
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);

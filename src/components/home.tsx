@@ -59,7 +59,9 @@ export default function Component() {
                     className="md:flex-1 bg-primary hover:bg-primary/90 text-primary-foreground dark:bg-primary dark:hover:bg-primary/90 dark:text-primary-foreground transition-all duration-300 rounded-xl"
                   >
                     <Sparkles className="mr-2 h-5 w-5" />
-                    <a href="https://app.livemoreai.com/register">Live Better Now</a>
+                    <a href="https://app.livemoreai.com/register">
+                      Live Better Now
+                    </a>
                   </Button>
 
                   <Button
@@ -150,44 +152,6 @@ export default function Component() {
           </div>
         </section>
         <BodyMemorySection />
-        {/* <section className="pb-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="mt-16 bg-muted rounded-lg px-8 py-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h3 className="text-2xl font-semibold mb-4">
-                Unlocking Your Body&apos;s Memory
-              </h3>
-              
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {[
-                  { title: "Nutrition Analysis", icon: Utensils },
-                  { title: "Environmental Impact", icon: Cloud },
-                  { title: "Stress Effects", icon: Brain },
-                  { title: "Medication Efficacy", icon: Pill },
-                  { title: "Immune System Battles", icon: Shield },
-                  { title: "Toxin Exposure", icon: Droplet },
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-center space-x-3"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className="bg-primary/10 p-2 rounded-full">
-                      <item.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <span className="font-medium">{item.title}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section> */}
 
         <section className="py-24 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">

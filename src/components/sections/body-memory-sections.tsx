@@ -54,18 +54,26 @@ export default function BodyMemorySection() {
 
   return (
     <section className="relative py-16 px-4 overflow-hidden">
-      <div className="max-w-6xl mx-auto relative">
-        <motion.div 
+      <div className="max-w-7xl mx-auto relative z-10">
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12 relative"
+          className="text-center mb-16 relative"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 dark:from-primary dark:to-primary/70">
-            Unlocking Your Body&apos;s Memory
-          </h2>
-
-        
+          <div className=" backdrop-blur-sm py-10 px-6 rounded-3xl">
+            <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 dark:from-primary dark:to-primary/70">
+              Unlocking Your Body&apos;s Memory
+            </h2>
+            <p className="max-w-3xl mx-auto text-slate-600 dark:text-slate-300">
+              Your DNA contains instructions for all your body&apos;s functions,
+              but your genetic activity can be modified by your diet,
+              environment, and experiences. These modifications don&apos;t
+              change your DNA sequence but affect how genes are expressed. Our
+              goal is to study these patterns to better understand what&apos;s
+              happening inside your body at the molecular level.​​​​​​​​​​​​​​​​
+            </p>
+          </div>
         </motion.div>
 
         <div className="relative">
@@ -137,8 +145,8 @@ export default function BodyMemorySection() {
                         <motion.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{
-                            height: activeCategory === category.id ? "auto" : 0,
-                            opacity: activeCategory === category.id ? 1 : 0,
+                            height: "auto",
+                            opacity: 1,
                           }}
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
