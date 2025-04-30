@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontHeading = Inter({
   subsets: ["latin"],
@@ -30,10 +31,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("antialiased", fontHeading.variable, fontBody.variable)}
+        className={cn("bg-background", "min-h-screen", "antialiased", fontHeading.variable, fontBody.variable)}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <div className="relative flex min-h-screen flex-col">
+            <main className="flex-1">{children}</main>
+          </div>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

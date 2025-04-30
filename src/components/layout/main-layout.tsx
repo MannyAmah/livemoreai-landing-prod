@@ -21,7 +21,7 @@ const MotionLink = motion(Link);
 const NavItems = [
   { label: "Home", link: "/", id: 1 },
   { label: "Providers", link: "/providers", id: 3 },
-  { label: "Research", link: "#solutions", id: 2 },
+  { label: "Research", link: "/blog", id: 2 },
   { label: "About us", link: "/about", id: 4 },
 ];
 
@@ -33,7 +33,6 @@ export default function MainLayout({ children }: IMainLayout) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -43,19 +42,16 @@ export default function MainLayout({ children }: IMainLayout) {
   }, []);
 
   const scrollToSection = (id: string) => {
-    if (id === "/" || id === "/about") {
-      window.location.href = id;
-      return;
-    }
+    window.location.href = id;
 
-    if (id === "/" || id === "/providers") {
-      window.location.href = id;
-      return;
-    }
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    // if (id === "/" || id === "/providers") {
+    //   window.location.href = id;
+    //   return;
+    // }
+    // const element = document.getElementById(id);
+    // if (element) {
+    //   element.scrollIntoView({ behavior: "smooth" });
+    // }
   };
 
   return (
