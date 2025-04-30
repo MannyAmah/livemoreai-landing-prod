@@ -162,7 +162,7 @@ export default function PostPage() {
 
         <div
           className="prose prose-lg prose-neutral max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: post.content }} 
         />
       </div>
     </MainLayout>

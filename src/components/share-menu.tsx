@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Share2, Copy, Twitter, Facebook, Linkedin, Mail, Check } from "lucide-react"
 import { toast } from "@/components/ui/use-toast"
-import { useRouter } from "next/navigation"
 
 interface ShareMenuProps {
   title: string
@@ -15,7 +14,6 @@ interface ShareMenuProps {
 
 export default function ShareMenu({ title, url, excerpt }: ShareMenuProps) {
   const [copied, setCopied] = useState(false)
-  const router = useRouter()
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   // Get the current URL if not provided
