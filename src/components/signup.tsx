@@ -41,7 +41,7 @@ export default function SignupPage() {
   }, []);
 
   const handleUserClick = () => {
-    router.push("https://app.livemoreai.com");
+    router.push(process.env.NEXT_PUBLIC_APP_URL ?? "");
   };
 
   const handleHealthcareClick = () => {
@@ -54,7 +54,7 @@ export default function SignupPage() {
 
     try {
       const response = await fetch(
-        "http://dashboard.livemoreai.com/api/healthcare-request-access/",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/healthcare-request-access/`,
         {
           method: "POST",
           headers: {

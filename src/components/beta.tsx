@@ -83,7 +83,7 @@ export default function BetaPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setErrorMessage(null);
     try {
-      const response = await fetch("https://dashboard.livemoreai.com/auth/programs/signup", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/programs/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

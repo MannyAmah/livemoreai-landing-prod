@@ -104,7 +104,7 @@ export default function MainLayout({ children }: IMainLayout) {
 
           {/* Action buttons with glow effects */}
           <div className="flex items-center gap-4">
-            <Link href="https://app.livemoreai.com/login">
+            <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/login`}>
               <Button
                 variant="outline"
                 size="sm"
@@ -113,7 +113,7 @@ export default function MainLayout({ children }: IMainLayout) {
                 Sign in
               </Button>
             </Link>
-            <Link href="https://app.livemoreai.com/register">
+            <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/register`}>
               <Button
                 size="sm"
                 className="hidden sm:inline-flex bg-gradient-to-r from-primary to-primary/80 hover:from-primary hover:to-primary shadow-md hover:shadow-primary/20 transition-all duration-300"
@@ -174,7 +174,7 @@ export default function MainLayout({ children }: IMainLayout) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: NavItems.length * 0.1 }}
                 >
-                  <Link href="https://app.livemoreai.com/login">
+                  <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/login`}>
                     <Button
                       variant="ghost"
                       className="w-full justify-start mt-2 hover:bg-primary/5"
@@ -188,7 +188,7 @@ export default function MainLayout({ children }: IMainLayout) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: (NavItems.length + 1) * 0.1 }}
                 >
-                  <Link href="https://app.livemoreai.com/register">
+                  <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/register`}>
                     <Button className="w-full justify-start bg-gradient-to-r from-primary to-primary/80">
                       Get started
                       <ChevronRight className="h-4 w-4 ml-1" />

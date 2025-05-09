@@ -59,7 +59,7 @@ export default function Component() {
                     className="md:flex-1 bg-primary hover:bg-primary/90 text-primary-foreground dark:bg-primary dark:hover:bg-primary/90 dark:text-primary-foreground transition-all duration-300 rounded-xl"
                   >
                     <Sparkles className="mr-2 h-5 w-5" />
-                    <a href="https://app.livemoreai.com/register">
+                    <a href={`${process.env.NEXT_PUBLIC_APP_URL}/register`}>
                       Live Better Now
                     </a>
                   </Button>

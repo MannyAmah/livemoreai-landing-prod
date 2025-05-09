@@ -164,7 +164,7 @@ export function AboutUsPage() {
                   program. Help shape the future of personalized healthcare!
                 </p>
                 <Button variant="default" size="lg" asChild>
-                  <Link href="https://app.livemoreai.com/register">
+                  <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/register`}>
                     Join Beta Program <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

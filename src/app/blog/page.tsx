@@ -3,8 +3,7 @@ import Image from "next/image";
 import { getPosts } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 import MainLayout from "@/components/layout/main-layout";
-import { PenLine, Plus, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { PenLine, Sparkles } from "lucide-react";
 
 export default function HomePage() {
   const allPosts = getPosts();

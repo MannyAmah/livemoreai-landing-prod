@@ -72,7 +72,7 @@ export default function ContactPage() {
 
     try {
       const response = await fetch(
-        "https://dashboard.livemoreai.com/api/healthcare-request-access/",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/healthcare-request-access/`,
         {
           method: "POST",
           headers: {
