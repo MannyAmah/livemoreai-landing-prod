@@ -3,9 +3,12 @@ import Image from "next/image";
 import { getPosts } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 import MainLayout from "@/components/layout/main-layout";
+import { PenLine, Plus, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   const allPosts = getPosts();
+  const hasPosts = allPosts && allPosts.length > 0;
 
   const featuredPost = allPosts[0];
   const remainingPosts = allPosts.slice(1);
@@ -13,6 +16,40 @@ export default function HomePage() {
   return (
     <MainLayout>
       <div className="container max-w-6xl py-12">
+        {/* No posts state */}
+        {!hasPosts && (
+          <div className="flex flex-col items-center justify-center py-20 text-center">
+            <div className="relative mb-8 rounded-full bg-gradient-to-br from-muted/80 to-muted p-8 shadow-md animate-fade-in">
+              <div className="absolute inset-0 rounded-full bg-background/50 backdrop-blur-sm animate-pulse-slow"></div>
+              <PenLine className="relative h-16 w-16 text-primary animate-float" />
+              <div className="absolute -right-2 -top-2">
+                <Sparkles className="h-6 w-6 text-primary/70 animate-sparkle" />
+              </div>
+            </div>
+            <h2
+              className="mb-3 text-3xl font-bold tracking-tight animate-slide-up"
+              style={{ animationDelay: "200ms" }}
+            >
+              No articles yet
+            </h2>
+            <p
+              className="mb-10 max-w-md text-muted-foreground animate-slide-up"
+              style={{ animationDelay: "300ms" }}
+            >
+              We&apos;re working on amazing content for you. Check back soon or
+              subscribe to be notified when new articles are published.
+            </p>
+            <div
+              className="animate-slide-up"
+              style={{ animationDelay: "400ms" }}
+            ></div>
+
+            {/* Decorative elements */}
+            <div className="pointer-events-none absolute left-1/4 top-1/3 h-32 w-32 rounded-full bg-primary/5 blur-3xl animate-blob"></div>
+            <div className="pointer-events-none absolute right-1/4 top-2/3 h-32 w-32 rounded-full bg-primary/5 blur-3xl animate-blob animation-delay-2000"></div>
+          </div>
+        )}
+
         {/* Featured post section */}
         {featuredPost && (
           <div className="mb-20">
@@ -102,16 +139,18 @@ export default function HomePage() {
         )}
 
         {/* Section divider */}
-        <div className="relative my-12">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-muted"></div>
+        {remainingPosts.length > 0 && (
+          <div className="relative my-12">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-muted"></div>
+            </div>
+            <div className="relative flex justify-center">
+              <span className="bg-background px-4 text-sm text-muted-foreground">
+                Recent Articles
+              </span>
+            </div>
           </div>
-          <div className="relative flex justify-center">
-            <span className="bg-background px-4 text-sm text-muted-foreground">
-              Recent Articles
-            </span>
-          </div>
-        </div>
+        )}
 
         {/* Grid of remaining posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
