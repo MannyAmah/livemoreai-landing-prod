@@ -21,7 +21,7 @@ const MotionLink = motion(Link);
 const NavItems = [
   { label: "Home", link: "/", id: 1 },
   { label: "Providers", link: "/providers", id: 3 },
-  { label: "Research", link: "/blog", id: 2 },
+  // { label: "Research", link: "/blog", id: 2 },
   { label: "About us", link: "/about", id: 4 },
 ];
 
