@@ -173,6 +173,12 @@ export default function CookieConsentBanner() {
                 >
                   Privacy Policy
                 </a>
+                 <a
+                  href="/cookie"
+                  className="text-sm text-[#115490] dark:text-[#4a9eff] hover:text-[#0d4373] dark:hover:text-[#3b8bef] underline underline-offset-4"
+                >
+                  Cookie Policy
+                </a>
               </div>
             </div>
           </div>
