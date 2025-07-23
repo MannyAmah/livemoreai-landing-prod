@@ -4,7 +4,7 @@ import TelehealthConsentForm from "@/components/telehelath-auth";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
 
-const allowedCode = "123abc"; // Replace with your actual code
+const allowedCode = "rrgldxikykbjtadglizz"; // Replace with your actual code
 
 export default function TelehealthConsentPage() {
   const searchParams = useSearchParams();

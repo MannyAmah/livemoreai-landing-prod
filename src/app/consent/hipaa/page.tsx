@@ -4,7 +4,7 @@ import HipaaAuthorization from "@/components/hipaa-auth";
 import { useSearchParams,useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
-const allowedCode = "123abc"; // Replace with your actual code
+const allowedCode = "123abcrrgldxikykbjtadglizz"; // Replace with your actual code
 
 export default function HipaaConsent() {
   const searchParams = useSearchParams();
