@@ -1,8 +1,5 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
 
 const TelehealthConsentForm = () => {
   return (
@@ -14,7 +11,7 @@ const TelehealthConsentForm = () => {
             I understand that Telehealth is a mode of delivering health care
             services via communication technologies (e.g., internet or
             cellphone) to facilitate diagnosis, consultation, treatment,
-            education, care management, and self-management of a patient’s
+            education, care management, and self-management of a patients
             health care.
           </p>
 
