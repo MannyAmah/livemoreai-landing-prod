@@ -68,7 +68,7 @@ export default function CookieConsentBanner() {
                   <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     We use cookies to enhance your browsing experience, serve
                     personalized ads or content, and analyze our traffic. By
-                    clicking "Accept All", you consent to our use of cookies.
+                    clicking &quot;Accept All&quot;, you consent to our use of cookies.
                   </p>
                 </div>
 
@@ -173,7 +173,7 @@ export default function CookieConsentBanner() {
                 >
                   Privacy Policy
                 </a>
-                 <a
+                <a
                   href="/cookie"
                   className="text-sm text-[#115490] dark:text-[#4a9eff] hover:text-[#0d4373] dark:hover:text-[#3b8bef] underline underline-offset-4"
                 >

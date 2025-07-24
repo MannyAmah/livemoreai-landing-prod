@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import MainLayout from "@/components/layout/main-layout";
 import React from "react";
 

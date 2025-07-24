@@ -1,7 +1,21 @@
-import React from "react";
+"use client"
+
+import React, { useEffect } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useRouter, useSearchParams } from "next/navigation";
+
+const allowedCode = "123abcrrgldxikykbjtadglizz";
 
 const TelehealthConsentForm = () => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  useEffect(() => {
+    const code = searchParams.get("code");
+    if (!code || code !== allowedCode) {
+      router.replace("/");
+    }
+  }, [searchParams, router]);
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h1 className="text-2xl font-bold">Telehealth Consent Form</h1>
@@ -11,8 +25,8 @@ const TelehealthConsentForm = () => {
             I understand that Telehealth is a mode of delivering health care
             services via communication technologies (e.g., internet or
             cellphone) to facilitate diagnosis, consultation, treatment,
-            education, care management, and self-management of a patients
-            health care.
+            education, care management, and self-management of a patients health
+            care.
           </p>
 
           <p>

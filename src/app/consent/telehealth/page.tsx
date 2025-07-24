@@ -1,20 +1,10 @@
-"use client";
-
+import React, { Suspense } from "react";
 import TelehealthConsentForm from "@/components/telehelath-auth";
-import { useRouter, useSearchParams } from "next/navigation";
-import React, { useEffect } from "react";
-
-const allowedCode = "rrgldxikykbjtadglizz"; // Replace with your actual code
 
 export default function TelehealthConsentPage() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
-  useEffect(() => {
-    const code = searchParams.get("code");
-    if (!code || code !== allowedCode) {
-      router.replace("/");
-    }
-  }, [searchParams, router]);
-  return <TelehealthConsentForm />;
+  return (
+    <Suspense fallback={<div>Loading consent form…</div>}>
+      <TelehealthConsentForm />
+    </Suspense>
+  );
 }

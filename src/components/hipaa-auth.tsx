@@ -1,7 +1,22 @@
-import React from "react";
+"use client";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useSearchParams, useRouter } from "next/navigation";
+import React, { useEffect } from "react";
 
 const HipaaAuthorization = () => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const allowedCode = "123abcrrgldxikykbjtadglizz"; // Replace with your actual code
+
+  useEffect(() => {
+    const code = searchParams.get("code");
+    if (!code || code !== allowedCode) {
+      router.replace("/");
+    }
+  }, [searchParams, router]);
+
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h1 className="text-2xl font-bold">HIPAA Authorization</h1>
